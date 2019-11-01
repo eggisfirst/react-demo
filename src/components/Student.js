@@ -1,0 +1,15 @@
+import React from 'react'
+
+export default function Student(props) {
+  return (
+    <li>
+      姓名：{props.name}
+      生日: {props.date}
+
+    </li>
+  )
+}
+
+ 
+
+

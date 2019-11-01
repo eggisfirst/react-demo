@@ -1,0 +1,16 @@
+.item {
+  color: lightseagreen;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+.disable {
+  cursor: not-allowed;
+  color: #ccc;
+}
+.active {
+  border: none;
+  color: #000
+}
