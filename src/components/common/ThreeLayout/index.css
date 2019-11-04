@@ -1,0 +1,16 @@
+.threeLayout {
+  display: flex;
+}
+
+.leftSide {
+  order: 1;
+}
+
+.main {
+  order: 2;
+  flex: 1 1 auto;
+}
+
+.rightSide {
+  order: 3;
+}
