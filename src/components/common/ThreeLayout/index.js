@@ -1,31 +1,41 @@
 import React from 'react';
 import './index.css'
+import PropTypes from 'prop-types'
+import types from '../../utils/commonTypes'
+
+ThreeLayout.defaultProps = {
+  minWidth: 800,
+  leftWidth: 200,
+  rightWidth: 200
+}
+ThreeLayout.PropTypes = {
+  minWidth: PropTypes.number,
+  leftWidth: PropTypes.number,
+  rightWidth: PropTypes.number,
+  children: types.children
+}
+
 
 export default  function ThreeLayout(props) {
-  const defaultProps = {
-    minWidth: 800,
-    leftWidth: 200,
-    rightWidth: 200
-  }
+ 
 
-  const datas = Object.assign({}, defaultProps, props)
 
   return (
     <div className='threeLayout' style={{
-      minWidth: datas.minWidth,
+      minWidth: props.minWidth,
     }}>
       <div className='main' >
-        {datas.children}
+        {props.children}
       </div>
       <div className='leftSide' style={{
-        width: datas.leftWidth,
+        width: props.leftWidth,
       }}>
-        {datas.left}
+        {props.left}
       </div>
       <div className='rightSide' style={{
-        width: datas.rightWidth,
+        width: props.rightWidth,
       }}>
-         {datas.right}
+         {props.right}
       </div>
     </div>
   );
