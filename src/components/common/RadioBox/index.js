@@ -1,6 +1,20 @@
 import React, { Component } from 'react'
-
+import types from '../../utils/commonTypes'
+import PropsTypes from 'prop-types'
 export default class RadioBox extends Component {
+  static defaulProps = {
+    radioName: '',
+    loves: []
+  }
+
+  static PropsTypes = {
+    name: PropsTypes.string.isRequired,
+    radioName: PropsTypes.string.isRequired,
+    onChange: PropsTypes.func,
+    loves: types.groupCheckBox.isRequired
+  }
+
+
   handleChange = e => {
     this.props.onChange(e.target.value)
   }

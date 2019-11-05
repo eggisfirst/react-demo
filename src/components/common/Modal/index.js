@@ -3,6 +3,8 @@ import React from 'react'
 import "./index.css"
 
 export default function Modal(props) {
+   
+
     var defaultProps = { //默认属性
         bg: "rgba(0,0,0,.5)"
     };

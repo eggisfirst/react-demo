@@ -1,6 +1,21 @@
 import React, { Component } from 'react'
+import types from '../../utils/commonTypes'
+import PropsTypes from 'prop-types'
 
 export default class CheckBox extends Component {
+  static defaulProps = {
+    checkLoves: [],
+    loves: []
+  }
+
+  static PropsTypes = {
+    name: PropsTypes.string.isRequired,
+    checkLoves: types.checkLoves.isRequired,
+    onChange: PropsTypes.func,
+    loves: types.groupCheckBox.isRequired
+  }
+
+
   handleChange = e => {
     let newArrs;
     if(e.target.checked) {
